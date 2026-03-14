@@ -110,7 +110,7 @@ VALUES ('Roberto Carlos', 'Cantor de Pagode', 3500.00, 5);
 INSERT INTO tb_pedido (status_ped, tipo, datahora, idcliente, num_registro_ped) 
 VALUES ('Em Andamento', 'Show completo', '2026-10-25 14:30:00', 123456789, 1);
 
--- INSERINDO DADOS NA TABELA MOVIMENTAÇÃO (tb_pedido)
+-- INSERINDO DADOS NA TABELA MOVIMENTAÇÃO (tb_movimentacao)
 
 INSERT INTO tb_movimentacao (status_mov, tipo, data_hora, num_registro, id_produto)
 VALUES ('Em Andamento','artista','2026-09-31 14:30:00', 123456789, 598818);
