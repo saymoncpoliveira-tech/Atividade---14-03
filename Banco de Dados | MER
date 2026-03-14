@@ -107,17 +107,17 @@ VALUES (123456789, 'Flavinho do Grau', 44000111);
 -- INSERINDO DADOS NA TABELA FUNCIONÁRIO (tb_funcionario)
 
 INSERT INTO tb_funcionario (nome, funcao, salario, tmp_serviço) 
-VALUES ('Roberto Carlos', 'Cantor de Pagode', 3500.00, 5);
+VALUES ('Roberto Carlos', 'Tecnico', 3500.00, 5);
 
 -- INSERINDO DADOS NA TABELA PEDIDO (tb_pedido)
 
 INSERT INTO tb_pedido (status_ped, tipo, datahora, idcliente, num_registro_ped) 
-VALUES ('Em Andamento', 'Show completo', '2026-10-25 14:30:00', 123456789, 1);
+VALUES ('Em Andamento', 'Serviço completo diurno', '2026-10-25 14:30:00', 123456789, 1);
 
--- INSERINDO DADOS NA TABELA MOVIMENTAÇÃO (tb_movimentacao)
+-- INSERINDO DADOS NA TAVBELA MOVIMENTAÇÃO (tb_movimentacao)
 
 INSERT INTO tb_movimentacao (status_mov, tipo, data_hora, num_registro, id_produto)
-VALUES ('Em Andamento','artista','2026-09-31 14:30:00', 123456789, 598818);
+VALUES ('Em Andamento','transporte','2026-09-31 14:30:00', 123456789, 598818);
 
 -- INSERINDO DADOS NA TABELA ESTOQUE (tb_estoque)
 
