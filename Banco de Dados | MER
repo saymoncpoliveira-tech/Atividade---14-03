@@ -115,8 +115,23 @@ VALUES ('Em Andamento', 'Show completo', '2026-10-25 14:30:00', 123456789, 1);
 INSERT INTO tb_movimentacao (status_mov, tipo, data_hora, num_registro, id_produto)
 VALUES ('Em Andamento','artista','2026-09-31 14:30:00', 123456789, 598818);
 
+-- INSERINDO DADOS NA TABELA ESTOQUE (tb_estoque)
+
 insert into tb_estoque (num_estoque, descricao, setor, qt_atual)
 values (1, 'Ferragens', 1, 100);
+insert into tb_estoque (num_estoque, descricao, setor, qt_atual)
+values (2, 'Equipamentos de Proteção', 1, 100);
+insert into tb_estoque (num_estoque, descricao, setor, qt_atual)
+values (3, 'Ferramentas de Corte ', 1, 100);
+
+-- DELETANDO DADOS NA TABELA ESTOQUE (tb_estoque)
+
+DELETE FROM tb_estoque 
+WHERE num_estoque = 2;
+DELETE FROM tb_estoque 
+WHERE num_estoque = 3;
+
+-- INSERINDO DADOS NA TABELA PRODUTO (tb_produto)
 
 insert into tb_produto (id_produto, tipo, preco, tb_estoque_num_estoque)
 values ('598818', 'Parafuso', '54.99', 1);
