@@ -19,6 +19,8 @@ create table tb_pedido
   status_ped varchar(30) not null,
   tipo varchar(45) not null,
   datahora datetime,
+  idcliente int not null,
+  num_registro_ped int not null,
 
   foreign key (idcliente)
   references tb_cliente(cpf),
@@ -36,7 +38,7 @@ create table tb_pedido
     nome VARCHAR(45) NOT NULL, 
     funcao VARCHAR (45) NOT NULL,
     salario FLOAT NOT NULL,
-	  tmp_serviço INT(2) 
+	tmp_serviço INT(2) 
   );
     
     -- TABELA MOVIMENTAÇÃO
@@ -47,6 +49,9 @@ create table tb_pedido
       status_mov VARCHAR(45) NOT NULL,
       tipo_ VARCHAR (45) NOT NULL,
       data_hora DATETIME NOT NULL,
+      num_registro INT NOT NULL,
+      id_produto INT NOT NULL,
+      
       FOREIGN KEY (num_registro)
       REFERENCES tb_funcionario (num_registro),
       FOREIGN KEY (id_produto)
@@ -54,15 +59,6 @@ create table tb_pedido
   );
 
   -- THIAGO
-
-  create table tb_estoque
-  (
-    num_estoque int primary key not null auto_increment,
-    descricao varchar(45) not null,
-    setor int not null,
-    qt_atual int not null
-  );
-
   create table tb_produto 
   (
     id_produto int primary key not null auto_increment,
@@ -73,3 +69,12 @@ create table tb_pedido
     foreign key (tb_estoque_num_estoque) 
     references tb_estoque(num_estoque)
   );
+  create table tb_estoque
+  (
+    num_estoque int primary key not null auto_increment,
+    descricao varchar(45) not null,
+    setor int not null,
+    qt_atual int not null
+  );
+
+
