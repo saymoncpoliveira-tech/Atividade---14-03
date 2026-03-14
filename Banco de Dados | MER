@@ -146,15 +146,25 @@ UPDATE tb_funcionario
 SET salario = 5500.00
 WHERE funcao = 'diretor' or 'Diretor' or 'DIRETOR';
 
--- ATUALIZANDO O PEDIDO QUANDO O CLIENTE CHATO MUDA A DATA, O HORÁRIO E O TIPO DO SHOW (Mó vacilo).
+-- ATUALIZANDO O PEDIDO QUANDO O CLIENTE CHATO MUDA A DATA, O HORÁRIO E O TIPO DO SERVIÇO (Mó vacilo).
 
 UPDATE tb_pedido
 SET datahora = '2026-10-27 18:30:00',
-	tipo = 'Show completo noturno'
+	tipo = 'Serviço completo noturno'
 WHERE status_ped = 'Em Andamento - alterado para a noite';
 
--- FIM DA TRANSAÇÃO
-COMMIT;
+UPDATE tb_cliente
+SET nome = 'José Carlinhos'
+WHERE cpf = 18948956462;
 
--- QUERIE DE CONSULTA
-select * from tb_cliente
+UPDATE tb_movimentacao
+SET  tipo = 'Final de Ano'
+WHERE data_mov = 2026/12/25;
+
+UPDATE tb_produto
+SET preco = 1500.00
+WHERE tipo = 'Show Particular';
+
+UPDATE tb_estoque
+SET setor = 2
+WHERE qt_atual = 1500
