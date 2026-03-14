@@ -1,6 +1,8 @@
 create database mec_industrial;
 use mec_industrial;
 
-create table
-
-
+create table tb_cliente(
+cpf int not null primary key,
+nome varchar (45) not null,
+cep int not null
+);
