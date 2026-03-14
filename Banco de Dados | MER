@@ -88,6 +88,10 @@ MODIFY COLUMN num_estoque INT NOT NULL;
       REFERENCES tb_produto (id_produto)
   );
 
+-- (DTL - CONTROLE DE TRANSAÇÃO)
+
+BEGIN;
+
 -- (DML - INSERT)
 
 -- ADIÇÃO DA COLUNA data_atualizacao NA TABELA PRODUTO (tb_produto)
@@ -148,3 +152,9 @@ UPDATE tb_pedido
 SET datahora = '2026-10-27 18:30:00',
 	tipo = 'Show completo noturno'
 WHERE status_ped = 'Em Andamento - alterado para a noite';
+
+-- FIM DA TRANSAÇÃO
+COMMIT;
+
+--QUERIE DE CONSULTA
+select * from tb_cliente
