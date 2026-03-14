@@ -113,7 +113,7 @@ VALUES ('Em Andamento', 'Show completo', '2026-10-25 14:30:00', 123456789, 1);
 -- INSERINDO DADOS NA TABELA MOVIMENTAÇÃO (tb_pedido)
 
 INSERT INTO tb_movimentacao (status_mov, tipo, data_hora, num_registro, id_produto)
-VALUES ('Em Andamento','artista','2026-09-31','123456789','598818');
+VALUES ('Em Andamento','artista','2026-09-31 14:30:00', 123456789, 598818);
 
 insert into tb_estoque (num_estoque, descricao, setor, qt_atual)
 values (1, 'Ferragens', 1, 100);
