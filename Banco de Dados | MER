@@ -156,5 +156,5 @@ WHERE status_ped = 'Em Andamento - alterado para a noite';
 -- FIM DA TRANSAÇÃO
 COMMIT;
 
---QUERIE DE CONSULTA
+-- QUERIE DE CONSULTA
 select * from tb_cliente
