@@ -1,3 +1,8 @@
+-- NOME DOS INTEGRANTES DO GRUPO:
+-- Saymon Carvalho Pereira de Oliveira
+-- Marcus Vinicius Leite dos Santos
+-- Thiago Bastos Pereira
+
 -- CRIAÇÃO DO BANCO
 
 create database mec_industrial;
@@ -83,4 +88,43 @@ MODIFY COLUMN num_estoque INT NOT NULL;
       REFERENCES tb_produto (id_produto)
   );
 
+-- (DML - INSERT)
+
+-- ADIÇÃO DA COLUNA data_atualizacao NA TABELA PRODUTO (tb_produto)
+
+ALTER TABLE tb_produto
+ADD COLUMN data_atualizacao DATETIME;
+
+-- INSERINDO DADOS NA TABELA CLIENTE (tb_cliente)
+
+INSERT INTO tb_cliente (cpf, nome, cep) 
+VALUES (123456789, 'Flavinho do Grau', 44000111);
+
+-- INSERINDO DADOS NA TABELA FUNCIONÁRIO (tb_funcionario)
+
+INSERT INTO tb_funcionario (nome, funcao, salario, tmp_serviço) 
+VALUES ('Roberto Carlos', 'Cantor de Pagode', 3500.00, 5);
+
+-- INSERINDO DADOS NA TABELA PEDIDO (tb_pedido)
+
+INSERT INTO tb_pedido (status_ped, tipo, datahora, idcliente, num_registro_ped) 
+VALUES ('Em Andamento', 'Show completo', '2026-10-25 14:30:00', 123456789, 1);
+
+-- INSERINDO DADOS NA TAVBELA MOVIMENTAÇÃO (tb_pedido)
+
+INSERT INTO tb_movimentacao (status_mov, tipo, data_hora, num_registro, id_produto)
+VALUES ('Em Andamento','artista','2026-09-31','123456789','598818');
+
+-- ATUALIZANDO SALÁRIO DO FUNCIONÁRIO QUANDO ELE É PROMOVIDO (o cara é bom d+)
+
+UPDATE tb_funcionario
+SET salario = 5500.00
+WHERE funcao = 'diretor' or 'Diretor' or 'DIRETOR';
+
+-- ATUALIZANDO O PEDIDO QUANDO O CLIENTE CHATO MUDA A DATA, O HORÁRIO E O TIPO DO SHOW (Mó vacilo).
+
+UPDATE tb_pedido
+SET datahora = '2026-10-27 18:30:00',
+	tipo = 'Show completo noturno'
+WHERE status_ped = 'Em Andamento - alterado para a noite';
 
