@@ -1,1 +1,6 @@
+create database mec_industrial;
+use mec_industrial;
+
+create table
+
 
